@@ -231,6 +231,7 @@ body {
   box-shadow: none;
   border-radius: 0;
   justify-content: flex-start;
+  color: #1C2F40;
 }
 
 .menu li:last-child{
@@ -285,6 +286,7 @@ body {
 .popup .content{
   border-radius: 8px;
   background: #fff;
+  color: #1C2F40;
   width: calc(100% - 15px);
   box-shadow: 0 0 15px rgba(96,123,146,0.25);
 }
@@ -317,6 +319,7 @@ form .row label{
   font-size: 16px;
   display: block;
   margin-bottom: 6px;
+  color: #1C2F40;
 }
 
 form :where(input, textarea){
@@ -330,13 +333,14 @@ form :where(input, textarea){
 }
 
 form :where(input, textarea):focus{
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(96,123,146,0.1);
 }
 
 form .row textarea{
-  height: 150px;
-  resize: none;
-  padding: 8px 15px;
+    color: #1C2F40;
+    height: 150px;
+    resize: none;
+    padding: 8px 15px;
 }
 
 form button{
