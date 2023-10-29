@@ -105,8 +105,8 @@ function showFilteredNotes(filteredNotes) {
                         <div class="bottom-content">
                             <span>${note.date}</span>
                             <div class="settings">
-                                <i onclick="updateNote(${id}, '${note.title}', '${filterDesc}')"><i class="uil uil-edit"></i>Edit</i>
-                                <i onclick="deleteNote(${id})"><i class="uil uil-trash"></i>Delete</i>
+                                <i onclick="updateNote(${id}, '${note.title}', '${filterDesc}')"><i class="uil uil-edit"></i></i>
+                                <i onclick="deleteNote(${id})"><i class="uil uil-trash"></i></i>
                             </div>
                         </div>
                     </li>`;
