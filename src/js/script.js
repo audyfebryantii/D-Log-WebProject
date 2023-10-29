@@ -49,11 +49,8 @@ function showNotes() {
                         <div class="bottom-content">
                             <span>${note.date}</span>
                             <div class="settings">
-                                <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
-                                <ul class="menu">
-                                    <li onclick="updateNote(${id}, '${note.title}', '${filterDesc}')"><i class="uil uil-pen"></i>Edit</li>
-                                    <li onclick="deleteNote(${id})"><i class="uil uil-trash"></i>Delete</li>
-                                </ul>
+                                <i onclick="updateNote(${id}, '${note.title}', '${filterDesc}')"><i class="uil uil-edit"></i></i>
+                                <i onclick="deleteNote(${id})"><i class="uil uil-trash"></i></i>
                             </div>
                         </div>
                     </li>`;
@@ -61,15 +58,6 @@ function showNotes() {
     });
 }
 showNotes();
-
-function showMenu(elem) {
-    elem.parentElement.classList.add("show");
-    document.addEventListener("click", e => {
-        if(e.target.tagName != "I" || e.target != elem) {
-            elem.parentElement.classList.remove("show");
-        }
-    });
-}
 
 function deleteNote(noteId) {
     let confirmDel = confirm("Are you sure you want to delete this note?");
@@ -117,11 +105,8 @@ function showFilteredNotes(filteredNotes) {
                         <div class="bottom-content">
                             <span>${note.date}</span>
                             <div class="settings">
-                                <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
-                                <ul class="menu">
-                                    <li onclick="updateNote(${id}, '${note.title}', '${filterDesc}')"><i class="uil uil-pen"></i>Edit</li>
-                                    <li onclick="deleteNote(${id})"><i class="uil uil-trash"></i>Delete</li>
-                                </ul>
+                                <i onclick="updateNote(${id}, '${note.title}', '${filterDesc}')"><i class="uil uil-edit"></i>Edit</i>
+                                <i onclick="deleteNote(${id})"><i class="uil uil-trash"></i>Delete</i>
                             </div>
                         </div>
                     </li>`;

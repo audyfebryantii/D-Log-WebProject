@@ -8,244 +8,216 @@
 }
 
 body {
-    background: #fff;
+  background: #fff;
 }
 
 .top-navbar {
-    position: sticky;
-    top: 0;
-    background-color: #fff;
-    z-index: 100; 
-    color: #1C2F40;
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid #607B92;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 100; 
+  color: #1C2F40;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #607B92;
   }
   
 .top-navbar p {
-    padding: 15px;
-    font-size: 24px;
-    font-weight:bold;
+  padding: 15px;
+  font-size: 24px;
+  font-weight:bold;
 }
 
 .navbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 30px 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 30px 50px;
 }
 
 .navbar-menu {
-    list-style: none;
-    display: flex;
-    gap: 10px;
+  list-style: none;
+  display: flex;
+  gap: 10px;
 }
 
 .navbar-menu li {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .search-bar {
-    display: flex;
-    align-items: center;
-    width: 265px;
-    border: 1px solid #607B92;
-    border-radius: 8px;
-    padding: 5px;
+  display: flex;
+  align-items: center;
+  width: 265px;
+  border: 1px solid #607B92;
+  border-radius: 8px;
+  padding: 5px;
 }
 
 .search-bar ::placeholder {
-    color: #607B92;
+  color: #607B92;
 }
 
 .search-input {
-    flex: 1;
-    border: none;
-    outline: none;
-    font-size: 16px;
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
 }
 
 .search-icon {
-    font-size: 16px;
-    margin-right: 5px;
-    color: #607B92;
+  font-size: 16px;
+  margin-right: 5px;
+  color: #607B92;
 }
 
 .add-box {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
 }
 
 .add-box .icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 8px;
-    background-color: #1C2F40;
-    width: 30px;
-    height: 100%;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  background-color: #1C2F40;
+  width: 30px;
+  height: 100%;
+  cursor: pointer;
 }
 
 .plus-icon {
-    font-size: 16px;
-    color: #fff;
+  font-size: 16px;
+  color: #fff;
 }
 
 .all-notes {
-    margin: 30px 50px;
+  margin: 30px 50px;
 }
-  
-  .all-notes p {
-    font-size: 22px;
-    color: #1C2F40;
-    font-weight: bold;
+
+.all-notes p {
+  font-size: 22px;
+  color: #1C2F40;
+  font-weight: bold;
 }
-  
+
 .all-notes span {
-    font-size: 14px;
-    color: #607B92;
+  font-size: 14px;
+  color: #607B92;
 }
 
 .notes-container {
-    margin: 15px 50px 50px 50px;
-    display: grid;
-    gap: 32px;
-    grid-template-columns: repeat(auto-fill, 265px);
+  margin: 15px 50px 50px 50px;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fill, 265px);
 }
 
 .notes-container li {
-    height: 250px;
-    list-style: none;
-    border-radius: 8px;
-    padding: 15px 20px 20px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(96,123,146,0.25);
+  height: 250px;
+  list-style: none;
+  border-radius: 8px;
+  padding: 15px 20px 20px;
+  background: #fff;
+  box-shadow: 0px 0px 2px 1px rgba(96,123,146,0.25);
 }
 
 .popup {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
 }
 
 .icon, .bottom-content, 
-.popup, header, .settings .menu li{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.popup, header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .note{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .note .details{
-    max-height: 165px;
-    overflow-y: auto;
+  max-height: 165px;
+  overflow-y: auto;
 }
 
 .note .details::-webkit-scrollbar,
 .popup textarea::-webkit-scrollbar{
-    width: 0;
+  width: 0;
 }
 
 .note .details:hover::-webkit-scrollbar,
 .popup textarea:hover::-webkit-scrollbar{
-    width: 5px;
+  width: 5px;
 }
 
 .note .details:hover::-webkit-scrollbar-track,
 .popup textarea:hover::-webkit-scrollbar-track{
-    background: #f1f1f1;
-    border-radius: 25px;
+  background: #f1f1f1;
+  border-radius: 25px;
 }
 
 .note .details:hover::-webkit-scrollbar-thumb,
 .popup textarea:hover::-webkit-scrollbar-thumb{
-    background: #e6e6e6;
-    border-radius: 25px;
+  background: #e6e6e6;
+  border-radius: 25px;
 }
 .note p{
-    color: #1C2F40;
-    font-size: 20px;
-    font-weight: bold;
+  color: #1C2F40;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .note span{
-    display: block;
-    color: #607B92;
-    font-size: 16px;
-    margin-top: 5px;
+  display: block;
+  color: #607B92;
+  font-size: 16px;
+  margin-top: 5px;
 }
 
 .note .bottom-content{
-    padding-top: 10px;
-    border-top: 1px solid #607B92;
+  padding-top: 10px;
+  border-top: 1px solid #607B92;
 }
 
 .bottom-content span{
-    color: #607B92;
-    font-size: 14px;
+  color: #607B92;
+  font-size: 14px;
+  font-weight: lighter;
 }
 
 .bottom-content .settings{
   position: relative;
 }
 
-.bottom-content .settings i{
+.bottom-content .settings i {
   color: #607B92;
   cursor: pointer;
-  font-size: 15px;
+  gap: 10px;
+  font-size: 16px;
 }
 
-.settings .menu{
-  z-index: 1;
-  bottom: 0;
-  right: -5px;
-  padding: 5px 0;
-  background: #fff;
-  position: absolute;
-  border-radius: 4px;
-  transform: scale(0);
-  transform-origin: bottom right;
-  box-shadow: 0 0 6px rgba(96,123,146,0.1);
-  transition: transform 0.2s ease;
-}
-
-.settings.show .menu{
+.settings.show {
   transform: scale(1);
 }
 
-.settings .menu li{
-  height: 25px;
-  font-size: 16px;
-  margin-bottom: 2px;
-  padding: 17px 15px;
-  cursor: pointer;
-  box-shadow: none;
-  border-radius: 0;
-  justify-content: flex-start;
-  color: #1C2F40;
+.settings { 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  color: #607B92;
 }
-
-.menu li:last-child{
-  margin-bottom: 0;
-}
-
-.menu li:hover{
-  background: #f5f5f5;
-}
-
-.menu li i{
-  padding-right: 8px;
-}
-
 
 .popup-box{
   position: fixed;
