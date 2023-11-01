@@ -37,6 +37,7 @@ updateTotalNotes();
 
 function showNotes() {
     if(!notes) return;
+    notes.sort((a, b) => new Date(b.date) - new Date(a.date));
     notesContainer.innerHTML = '';
     notes.forEach((note, id) => {
         let filterDesc = note.description.replaceAll("\n", '<br/>');
@@ -58,14 +59,32 @@ function showNotes() {
 }
 showNotes();
 
-function deleteNote(noteId) {
-    let confirmDel = confirm("Are you sure you want to delete this note?");
-    if(!confirmDel) return;
-    notes.splice(noteId, 1);
-    localStorage.setItem("notes", JSON.stringify(notes));
-    showNotes();
-    updateTotalNotes();
+function deleteNote(noteIndex) {
+    const confirmationPopup = document.querySelector(".confirmation-popup");
+    const confirmDeleteButton = confirmationPopup.querySelector(".confirm-delete");
+    const cancelDeleteButton = confirmationPopup.querySelector(".cancel-delete");
+
+    confirmationPopup.style.display = "flex";
+
+    confirmDeleteButton.addEventListener("click", () => {
+        confirmationPopup.style.display = "none";
+
+        // Hapus catatan dengan indeks yang sesuai
+        if (noteIndex !== -1) {
+            notes.splice(noteIndex, 1);
+            localStorage.setItem("notes", JSON.stringify(notes));
+            showNotes();
+            updateTotalNotes();
+        }
+    });
+
+    cancelDeleteButton.addEventListener("click", () => {
+        confirmationPopup.style.display = "none";
+    });
 }
+
+
+
 
 function updateNote(noteId, title, filterDesc) {
     let description = filterDesc.replaceAll('<br/>', '\r\n');
