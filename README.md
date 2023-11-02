@@ -1,5 +1,9 @@
 # D-Log
 
+## Audy Febryanti (D121211005)
+
+## Deskripsi
+
 D-Log adalah website journaling atau catatan sederhana yang dibuat untuk memenuhi tugas UTS mata kuliah Pemrograman Web tahun 20231. Website ini bertujuan memberikan akses cepat dan mudah kepada siapa saja yang ingin melakukan journaling atau mencatat. 
 
 ## Fitur Utama
